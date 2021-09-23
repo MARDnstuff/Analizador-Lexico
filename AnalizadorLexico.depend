@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1632370409 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
+	<iostream>
+	"ClaseEstado.h"
+	"ClaseTransicion.h"
+	"ClaseAFN.h"
+	<vector>
+
+1632107367 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\clasetransicion.h
+
+1632359112 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseestado.h
+	<vector>
+	"ClaseTransicion.h"
+
+1632113565 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseestado.cpp
+	"ClaseEstado.h"
+	<vector>
+
+1632267305 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\clasetransicion.cpp
+	"ClaseTransicion.h"
+
+1632368578 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafn.cpp
+	"SimbolosEspeciales.h"
+	"ClaseAFN.h"
+	"ClaseEstado.h"
+	"ClaseTransicion.h"
+
+1632370347 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseafn.h
+	<iostream>
+	"ClaseEstado.h"
+	<vector>
+
+1632277832 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbolosespeciales.h
+	<stdio.h>
+	<stdlib.h>
+
