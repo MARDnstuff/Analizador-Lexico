@@ -1,36 +1,56 @@
 # depslib dependency file v1.0
-1632370409 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
+1632718995 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
 	<iostream>
 	"ClaseEstado.h"
 	"ClaseTransicion.h"
 	"ClaseAFN.h"
+	"ClaseAFD.h"
 	<vector>
 
 1632107367 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\clasetransicion.h
 
-1632359112 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseestado.h
+1632602269 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseestado.h
 	<vector>
 	"ClaseTransicion.h"
 
-1632113565 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseestado.cpp
+1632601211 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseestado.cpp
 	"ClaseEstado.h"
 	<vector>
 
 1632267305 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\clasetransicion.cpp
 	"ClaseTransicion.h"
 
-1632368578 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafn.cpp
-	"SimbolosEspeciales.h"
+1632632965 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafn.cpp
 	"ClaseAFN.h"
 	"ClaseEstado.h"
 	"ClaseTransicion.h"
 
-1632370347 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseafn.h
+1632630426 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseafn.h
 	<iostream>
 	"ClaseEstado.h"
+	"SimbolosEspeciales.h"
 	<vector>
+	<stack>
 
-1632277832 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbolosespeciales.h
+1632602902 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbolosespeciales.h
 	<stdio.h>
 	<stdlib.h>
+	<iostream>
+
+1632717165 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\claseafd.h
+	"ClaseAFN.h"
+	"ConIj.h"
+	<vector>
+	<stack>
+
+1632714804 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\conij.h
+	"ClaseEstado.h"
+	"ClaseTransicion.h"
+	<vector>
+
+1632714804 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\conij.cpp
+	"ConIj.h"
+
+1632719550 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafd.cpp
+	"ClaseAFD.h"
 

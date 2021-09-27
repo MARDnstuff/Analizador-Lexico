@@ -19,6 +19,8 @@ class Estado{
     public:
         //Constructor de un estado
         Estado();
+        //Constructor de un estado vacio
+        Estado Estado_null();
         // Regresa id del estado
         int get_IdEstado();
         // Establece el id del estado

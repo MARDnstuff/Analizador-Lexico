@@ -11,6 +11,13 @@ Estado::Estado(){
     //ctor
 }
 
+//Constructor de un estado vacio
+Estado Estado :: Estado_null(){
+    Estado e = Estado();
+    e.set_IdEstado(-1);
+    return e;
+}
+
 // Regresa id del estado
 int Estado:: get_IdEstado(){
     return idEstado1;
