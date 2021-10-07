@@ -12,7 +12,7 @@ class AFD{
         std::vector<int> flag;
         std::vector<char> Alfabeto; //Alfabeto propio del automata
         //Matriz de adyacencia para el AFD
-        int **Mx_adyacencia = new int*[257];
+        int **Mx_adyacencia;
     private:
         std::vector<ConIj> EdoAFD; //Conjunto de estados
         std::vector<ConIj> EdoAcept; //Conjunto de estados de aceptacion
@@ -60,6 +60,11 @@ class AFD{
         //Establece la tabla de adyacencia correspondiente al AFD (this)
         void Crea_TablaAFD ();
 
+        //Guardar
+
+        //Analisis de cadenas
+
+        //yylex()
 
         //Destructor
         virtual ~AFD();

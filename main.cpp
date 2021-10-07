@@ -49,7 +49,7 @@ e.AFN_UnionEspecial(a4,30,a4.Contador);
 AFD nuevo = AFD();
 nuevo = nuevo.Conv_AFNaAFD(e);
 
-Ver_Alfabeto(nuevo.Alfabeto);
+/*Ver_Alfabeto(nuevo.Alfabeto);//quitar epsilon
 
 int t = (int) e.EdoAcept.size();
 for(int i=0;i<t;i++){
@@ -59,10 +59,10 @@ for(int i=0;i<t;i++){
 t = (int) nuevo.get_EdoAcept().size();
 for(int i=0;i<t;i++){
     cout<<"<>"<<nuevo.get_EdoAcept().at(i).get_ConIj_ID()<<"Token: "<<nuevo.get_EdoAcept().at(i).Token<<endl;
-}
-/*vector<ConIj> temp;
+}*/
+vector<ConIj> temp;
 temp = nuevo.get_EdoAFN();
-int tam = (int) temp.size(),tam_;
+/*int tam = (int) temp.size(),tam_;
 for(int i=0; i<tam ; i++){
     cout<<temp.at(i).get_ConIj_ID()<<"Aceptacion:"<<temp.at(i).Acept<<endl;
     cout<<"Token: "<<temp.at(i).Token<<endl;
@@ -82,7 +82,7 @@ for(int i=0; i<tam ; i++){
 
 nuevo.Crea_TablaAFD();
 int m = (int) nuevo.get_EdoAFN().size();
- for(int i=0; i<;i++){
+ for(int i=0; i<m;i++){
         for(int j=0; j<257; j++){
             if(j%5 == 0){
                 cout<<endl;
@@ -97,13 +97,9 @@ for(int i=0;i<p;i++){
     cout<<"->"<<nuevo.flag.at(i)<<endl;
 }*/
 
-cout<<"-->"<<nuevo.Mx_adyacencia[0][256]<<endl;
-cout<<"-->"<<nuevo.Mx_adyacencia[1][256]<<endl;
-cout<<"-->"<<nuevo.Mx_adyacencia[2][256]<<endl;
-cout<<"-->"<<nuevo.Mx_adyacencia[3][256]<<endl;
-cout<<"-->"<<nuevo.Mx_adyacencia[4][256]<<endl;
 
-    return 0;
+
+    exit(0);
 }
 
 

@@ -205,17 +205,18 @@ AFD AFD :: Conv_AFNaAFD (AFN automata){
     return *this;
 
 }
-
+/////bug
 //Establece la tabla de adyacencia correspondiente al AFD (this)
 void AFD :: Crea_TablaAFD (){
     int m = (int) EdoAFD.size();
-    for(int i=0; i<256; i++){
-        Mx_adyacencia[i] = new int[m];
+    Mx_adyacencia = new int*[m];
+    for(int i=0; i<m; i++){
+        Mx_adyacencia[i] = new int[258];
     }//for
 
     //inicializamos todo con -1
     for(int i=0; i<m;i++){
-        for(int j=0; j< 257; j++){
+        for(int j=0; j< 258; j++){
             Mx_adyacencia[i][j] = -1;
         }//for
     }//for
@@ -231,14 +232,14 @@ void AFD :: Crea_TablaAFD (){
         for(int m =0; m<tam_;m++){
             int simb_pos = (int) aux.Trans1.at(m).get_SimbInf();
             Mx_adyacencia[n][simb_pos] = aux.Trans1.at(m).get_EdoDestino();
-
+           // std::cout<<"["<<n<<"]"<<"["<<simb_pos<<"]-->"<<aux.Trans1.at(m).get_EdoDestino()<<std::endl;
         }//for
-         if(aux.Acept){
-                Mx_adyacencia[n][256] = aux.Token;
+         /*if(aux.Acept){
+                Mx_adyacencia[n][257] = aux.Token;
 
             }else{
-                Mx_adyacencia[n][256] =0;
-            }
+                Mx_adyacencia[n][257] =0;
+            }*/
     }//for
 
     return;
