@@ -153,8 +153,12 @@ AFN AFN :: AFN_Basico (char simb1,char simb2,int Cont){
 
 //Union de dos AFN
 AFN AFN :: AFN_Union (AFN automata){
-
-    int Origen= automata.get_Contador();
+    int Origen;
+    if(automata.get_Contador() > Contador){
+        Origen = automata.get_Contador();
+    }else{
+        Origen= Contador;
+    }
     int Destino=Origen+1;
     Estado e1,e2;
     e1 = Estado();

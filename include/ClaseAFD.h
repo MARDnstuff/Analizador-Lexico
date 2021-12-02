@@ -2,7 +2,15 @@
 #define CLASEAFD_H
 #include "ClaseAFN.h"
 #include "ConIj.h"
+#include <iostream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <algorithm>
+#include <fstream>
+#include <sstream>
 #include <vector>
+#include <string>
+#include <string.h>
 #include <stack>
 
 
@@ -13,6 +21,8 @@ class AFD{
         std::vector<char> Alfabeto; //Alfabeto propio del automata
         //Matriz de adyacencia para el AFD
         int **Mx_adyacencia;
+        int tamMx_column = 257;
+        int tamMx_row;
     private:
         std::vector<ConIj> EdoAFD; //Conjunto de estados
         std::vector<ConIj> EdoAcept; //Conjunto de estados de aceptacion
@@ -60,11 +70,11 @@ class AFD{
         //Establece la tabla de adyacencia correspondiente al AFD (this)
         void Crea_TablaAFD ();
 
-        //Guardar
+        //Guardar tabla del AFD en un archivo txt (AFD this)
+        bool Guarda_TablaAFD(std::string NombreArchivo);
 
-        //Analisis de cadenas
-
-        //yylex()
+        //Carga la tabla de un AFD extraido de un archivo txt
+        void Carga_TablaAFD(std::string RutaArchivo);
 
         //Destructor
         virtual ~AFD();

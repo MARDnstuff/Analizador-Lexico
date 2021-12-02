@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-const  char EPSILON =(char) 33;
+const  char EPSILON =(char) 5;
 const char FIN = (char)0;
 
 

@@ -199,24 +199,30 @@ AFD AFD :: Conv_AFNaAFD (AFN automata){
     }//for
 
     EdoAFD = Estados;
-    Alfabeto = automata.Alfabeto;
+
+    tam = (int) automata.Alfabeto.size();
+    for(int i=0; i<tam; i++){
+        if(automata.Alfabeto.at(i) != EPSILON)
+            Alfabeto.push_back(automata.Alfabeto.at(i));
+    }//for
     EdoIni = 0;
     IdAFD=300;
     return *this;
 
 }
-/////bug
+
 //Establece la tabla de adyacencia correspondiente al AFD (this)
 void AFD :: Crea_TablaAFD (){
     int m = (int) EdoAFD.size();
+    tamMx_row = m;
     Mx_adyacencia = new int*[m];
     for(int i=0; i<m; i++){
-        Mx_adyacencia[i] = new int[258];
+        Mx_adyacencia[i] = new int[257];
     }//for
 
     //inicializamos todo con -1
     for(int i=0; i<m;i++){
-        for(int j=0; j< 258; j++){
+        for(int j=0; j< 257; j++){
             Mx_adyacencia[i][j] = -1;
         }//for
     }//for
@@ -232,19 +238,86 @@ void AFD :: Crea_TablaAFD (){
         for(int m =0; m<tam_;m++){
             int simb_pos = (int) aux.Trans1.at(m).get_SimbInf();
             Mx_adyacencia[n][simb_pos] = aux.Trans1.at(m).get_EdoDestino();
-           // std::cout<<"["<<n<<"]"<<"["<<simb_pos<<"]-->"<<aux.Trans1.at(m).get_EdoDestino()<<std::endl;
         }//for
-         /*if(aux.Acept){
-                Mx_adyacencia[n][257] = aux.Token;
+         if(aux.Acept){
+                Mx_adyacencia[n][256] = aux.Token;
 
             }else{
-                Mx_adyacencia[n][257] =0;
-            }*/
+                Mx_adyacencia[n][256] =-1;
+            }
     }//for
 
     return;
 }
 
+//Guardar tabla del AFD en un archivo txt (AFD this)
+bool AFD :: Guarda_TablaAFD(std::string NombreArchivo){
+    std::string s1;
+    s1 = NombreArchivo + ".txt";
+
+     std::ofstream archivoNuevo(s1, std::ios::out);
+    if(!archivoNuevo){
+        std::cerr<<"No se puede abrir el archivo"<<std::endl;
+        return false;
+    }//if
+    int mx;
+    char s2 = ',';
+    for(int i=0; i<tamMx_row; i++){
+        for(int j=0; j<tamMx_column;j++){
+            mx = Mx_adyacencia[i][j];
+            archivoNuevo<<mx<<s2;
+        }//for
+        archivoNuevo<<std::endl;
+    }//for
+return true;
+}
+
+//Carga la tabla de un AFD extraido de un archivo txt
+void  AFD :: Carga_TablaAFD(std::string RutaArchivo){
+    std::vector<int> renglon;
+    std::vector<std::vector<int>> matriz;
+   std::ifstream archivoEntrada(RutaArchivo);
+    //std::cout<<archivoEntrada.is_open()<<std::endl;
+   if(!archivoEntrada){
+        std::cerr<<"No se puede abrir el archivo"<<std::endl;
+        exit(EXIT_FAILURE);
+   }//if
+    std::string str;
+    //mientras no alcancemos el final
+    int j=0,dato;
+    while(!archivoEntrada.eof()){
+        for(int i=0; i<257; i++){
+            std::getline(archivoEntrada,str,',');
+
+            if(str!= "\n"){
+                if(str.at(0) == '\n'){
+                    str.erase(str.begin());
+                }
+               //std::cout<<"cadena:"<<str<<"-->"<<str.size()<<std::endl;
+                dato = std::stoi(str);
+                renglon.push_back(dato);
+            }//if
+        }//for
+        matriz.push_back(renglon);
+        renglon.clear();
+        j++;
+    }//while
+
+    int tam = (int) matriz.size();
+    Mx_adyacencia = new int*[tam];
+    for(int i=0; i<tam; i++){
+        Mx_adyacencia[i] = new int[257];
+    }//for
+
+
+    for(int x=0; x<tam; x++){
+        int tam_= (int) matriz.at(x).size();
+        for(int y=0; y<tam_; y++){
+            Mx_adyacencia[x][y] = matriz.at(x).at(y);
+        }//for
+    }//for
+
+}
 
 AFD::~AFD(){
     //dtor
