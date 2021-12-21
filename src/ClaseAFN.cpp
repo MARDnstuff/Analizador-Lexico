@@ -276,7 +276,9 @@ AFN AFN :: AFN_Conca (AFN automata){
         }
     }//for
 
-    Contador=automata.Contador;
+    if(automata.get_Contador() > Contador){
+        Contador=automata.Contador;
+    }
 
     return *this;
 

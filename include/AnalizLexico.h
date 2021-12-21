@@ -1,6 +1,6 @@
 #ifndef ANALIZLEXICO_H
 #define ANALIZLEXICO_H
-//#include "SimbolosEspeciales.h"
+#include "Estado_AnalizLexico.h"
 #include "ClaseAFD.h"
 #include<string>
 #include<stack>
@@ -22,6 +22,12 @@ class AnalizLexico{
 
         //Constructor De Analizador lexico por AFD
         AnalizLexico(std::string sigma, AFD AutFD);
+
+        //Guardar estado actual del analizador lexico
+        Estado_AnalizLexico GetEdoAnalizLexico();
+
+        //Establece el estado del analizador lexico
+        bool SetEdoAnalizLexico(Estado_AnalizLexico e);
 
         //Establece la cadena Sigma(cadena que se va analizará)
         void SetSigma(std::string sigma);

@@ -35,21 +35,37 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/AnalizLexico.h" />
+		<Unit filename="include/AnalizadorLL1.h" />
 		<Unit filename="include/ClaseAFD.h" />
 		<Unit filename="include/ClaseAFN.h" />
 		<Unit filename="include/ClaseEstado.h" />
+		<Unit filename="include/ClaseNodo.h" />
 		<Unit filename="include/ClaseTransicion.h" />
 		<Unit filename="include/ConIj.h" />
+		<Unit filename="include/DescRecGram_Gram.h" />
+		<Unit filename="include/ER_AFN.h" />
+		<Unit filename="include/ElemArreglo.h" />
+		<Unit filename="include/Estado_AnalizLexico.h" />
 		<Unit filename="include/EvaluadorExp1.h" />
+		<Unit filename="include/Simb.h" />
+		<Unit filename="include/SimbTerm.h" />
 		<Unit filename="include/SimbolosEspeciales.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AnalizLexico.cpp" />
+		<Unit filename="src/AnalizadorLL1.cpp" />
 		<Unit filename="src/ClaseAFD.cpp" />
 		<Unit filename="src/ClaseAFN.cpp" />
 		<Unit filename="src/ClaseEstado.cpp" />
+		<Unit filename="src/ClaseNodo.cpp" />
 		<Unit filename="src/ClaseTransicion.cpp" />
 		<Unit filename="src/ConIj.cpp" />
+		<Unit filename="src/DescRecGram_Gram.cpp" />
+		<Unit filename="src/ER_AFN.cpp" />
+		<Unit filename="src/ElemArreglo.cpp" />
+		<Unit filename="src/Estado_AnalizLexico.cpp" />
 		<Unit filename="src/EvaluadorExp1.cpp" />
+		<Unit filename="src/Simb.cpp" />
+		<Unit filename="src/SimbTerm.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

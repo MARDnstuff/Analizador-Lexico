@@ -6,7 +6,7 @@
 #include <memory>
 
 class EvaluadorExp1{
-private:
+public:
     std::string Expresion;
     float result;
     std::string ExprPost;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1638412889 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
+1640081699 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
 	<iostream>
 	<memory>
 	"ClaseEstado.h"
@@ -8,7 +8,11 @@
 	"ClaseAFD.h"
 	"AnalizLexico.h"
 	"EvaluadorExp1.h"
+	"ER_AFN.h"
+	"DescRecGram_Gram.h"
+	"AnalizadorLL1.h"
 	<vector>
+	<list>
 
 1632103767 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\clasetransicion.h
 
@@ -23,7 +27,7 @@
 1632263705 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\clasetransicion.cpp
 	"ClaseTransicion.h"
 
-1637996651 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafn.cpp
+1638676259 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafn.cpp
 	"ClaseAFN.h"
 	"ClaseEstado.h"
 	"ClaseTransicion.h"
@@ -35,8 +39,7 @@
 	<vector>
 	<stack>
 
-1634000456 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbolosespeciales.h
-	<stdio.h>
+1639026391 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbolosespeciales.h
 	<stdlib.h>
 	<iostream>
 
@@ -62,13 +65,14 @@
 1632711204 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\conij.cpp
 	"ConIj.h"
 
-1638413866 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafd.cpp
+1638661468 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\claseafd.cpp
 	"ClaseAFD.h"
 
-1634079479 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\analizlexico.cpp
+1638858251 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\analizlexico.cpp
 	"AnalizLexico.h"
 
-1634079126 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\analizlexico.h
+1638858318 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\analizlexico.h
+	"Estado_AnalizLexico.h"
 	"ClaseAFD.h"
 	<string>
 	<stack>
@@ -76,9 +80,78 @@
 1637991011 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\evaluadorexp1.cpp
 	"EvaluadorExp1.h"
 
-1637990419 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\evaluadorexp1.h
+1638481115 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\evaluadorexp1.h
 	<string>
 	"AnalizLexico.h"
 	"ClaseAFD.h"
 	<memory>
+
+1638638843 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\er_afn.h
+	<string>
+	"ClaseAFN.h"
+	"AnalizLexico.h"
+	<memory>
+
+1639026732 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\er_afn.cpp
+	"ER_AFN.h"
+
+1638854140 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\estado_analizlexico.h
+	<string>
+	<stack>
+
+1638854139 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\estado_analizlexico.cpp
+	"Estado_AnalizLexico.h"
+
+1640078342 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\descrecgram_gram.cpp
+	"DescRecGram_Gram.h"
+
+1640063252 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\descrecgram_gram.h
+	<stdlib.h>
+	<memory>
+	<string>
+	<list>
+	<vector>
+	"ClaseNodo.h"
+	"AnalizLexico.h"
+	"ClaseAFD.h"
+	"Estado_AnalizLexico.h"
+	"ElemArreglo.h"
+
+1639027206 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\clasenodo.cpp
+	"ClaseNodo.h"
+
+1639027236 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\clasenodo.h
+	<string>
+
+1639027290 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\elemarreglo.cpp
+	"ElemArreglo.h"
+
+1639609382 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\elemarreglo.h
+	<vector>
+	"ClaseNodo.h"
+
+1640058893 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\simbterm.cpp
+	"SimbTerm.h"
+
+1640052642 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbterm.h
+	<string>
+
+1640082432 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\analizadorll1.cpp
+	"AnalizadorLL1.h"
+
+1640080785 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\analizadorll1.h
+	<vector>
+	<string>
+	"DescRecGram_Gram.h"
+	"AnalizLexico.h"
+	"SimbTerm.h"
+	"ClaseNodo.h"
+	"Simb.h"
+	<stack>
+
+1640075327 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simb.h
+	<string>
+
+1640075325 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\simb.cpp
+	"Simb.h"
 
