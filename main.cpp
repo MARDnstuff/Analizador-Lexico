@@ -63,13 +63,25 @@ int main(){
         e.AFN_UnionEspecial(a10,10,a10.Contador); // num
     */
     e.SetLexico("AFDAritmeticas.txt");
-    e.LexGram.SetSigma("5+5");
+    e.LexGram.SetSigma("2.57*(12+16-8)/13-17)");
 
     cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
     cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
     cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
+    cout<<e.LexGram.yylex()<<" --> "<<e.LexGram.Lexema<<endl;
 
-    if(e.AnalizSintacLL1("2.57*(12+16-8)/13-17)")){ //<-- Es el caso de erro resolverlo YYAAA
+
+    if(e.AnalizSintacLL1("2.57*(12+16-8)/(13-17)")){ //<-- Es el caso de erro resolverlo YYAAA
         cout<<"cadena correcta"<<endl;
     }else{
         cout<<"cadena incorrecta"<<endl;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1640081699 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
+1640127230 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\main.cpp
 	<iostream>
 	<memory>
 	"ClaseEstado.h"
@@ -136,7 +136,7 @@
 1640052642 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\simbterm.h
 	<string>
 
-1640082432 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\analizadorll1.cpp
+1640132350 source:c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\src\analizadorll1.cpp
 	"AnalizadorLL1.h"
 
 1640080785 c:\users\reyma\desktop\escom-5tosem\compiladores\proyecto\analizadorlexico\include\analizadorll1.h

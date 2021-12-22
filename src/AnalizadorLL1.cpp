@@ -130,7 +130,6 @@ void AnalizadorLL1 :: CrearTablaLL1(){
 
 //Analisador sintactico LL1
 bool AnalizadorLL1 :: AnalizSintacLL1(std::string Sigma){
-
     int Tok, TokTerm;
     int renglon, columna;
     std::stack<Simb> Pila;
@@ -148,7 +147,9 @@ bool AnalizadorLL1 :: AnalizSintacLL1(std::string Sigma){
        if(Pila.empty() && Tok == 0){
             //Cadena sintácticamente correcta
             return true;
-       }//if
+       }else if(Pila.empty() && Tok > 0){
+            return false;
+       }
        elemPila = Pila.top();
        Pila.pop();
        if(elemPila.Terminal){
